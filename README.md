@@ -1,4 +1,5 @@
 # bec
 
-npm install react-router-dom axios
-npm start
+## Instalación y uso
+* npm install react-router-dom axios
+* npm start
