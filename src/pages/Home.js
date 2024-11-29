@@ -25,25 +25,24 @@ const Home = () => {
 
   return (
     <div>
+      {/* Jumbotron */}
       <div
         className="jumbotron text-center text-white"
         style={{
-          backgroundColor: "#f5f5dc", // Un color beige claro
+          backgroundColor: "#f5f5dc",
           padding: "2rem",
-          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
           borderRadius: "10px",
           marginBottom: "2rem",
         }}
       >
         <h1 style={{ color: "#4b2e1a" }}>Bienvenido a la Biblioteca BEC</h1>
-        <p style={{ color: "#4b2e1a" }}>
-          Descubre nuestra colección de libros y multimedia.
-        </p>
+        <p style={{ color: "#4b2e1a" }}>Descubre nuestra colección de libros y multimedia.</p>
         <Link to="/catalog" className="btn btn-dark">
           Ver Catálogo Completo
         </Link>
       </div>
 
+      {/* Libros Destacados */}
       <div className="container mt-5">
         <h2 className="text-center mb-4">Libros Destacados</h2>
         <div className="row">
@@ -54,6 +53,10 @@ const Home = () => {
                 <div className="card-body">
                   <h5 className="card-title">{libro.titulo}</h5>
                   <p className="card-text text-muted">{libro.autor}</p>
+                  {/* Botón para ver detalles */}
+                  <Link to={`/book/${libro.id}`} className="btn btn-dark">
+                    Ver Detalles
+                  </Link>
                 </div>
               </div>
             </div>

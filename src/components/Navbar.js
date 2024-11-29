@@ -4,9 +4,9 @@ import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#4b2e1a" }}>
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand text-white" to="/">
           Biblioteca BEC
         </Link>
         <button
@@ -23,12 +23,12 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link text-white" to="/">
                 Inicio
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/catalog">
+              <Link className="nav-link text-white" to="/catalog">
                 Catálogo Completo
               </Link>
             </li>
