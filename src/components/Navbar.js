@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Navbar.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          BEC
+          Biblioteca BEC
         </Link>
         <button
           className="navbar-toggler"
@@ -21,20 +21,15 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">
                 Inicio
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                Acerca de
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">
-                Contacto
+              <Link className="nav-link" to="/catalog">
+                Catálogo Completo
               </Link>
             </li>
           </ul>
