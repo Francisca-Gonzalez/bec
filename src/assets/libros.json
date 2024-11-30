@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "titulo": "El Principito",
+        "autor": "Antoine de Saint-Exupéry",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.4jjqK8r4niDGIu1EzysUaAHaL8?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 2,
+        "titulo": "Cien Años de Soledad",
+        "autor": "Gabriel García Márquez",
+        "genero": "Realismo Mágico",
+        "imagen": "https://th.bing.com/th/id/OIP.V_zRhQVc2o3qUvlc7KwpxgHaLT?w=600&h=916&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 3,
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "genero": "Distopía",
+        "imagen": "https://th.bing.com/th/id/OIP.8weipgxeZASSI2nt9APKNAAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 4,
+        "titulo": "Orgullo y Prejuicio",
+        "autor": "Jane Austen",
+        "genero": "Romance",
+        "imagen": "https://th.bing.com/th/id/OIP.RbRUpRM6dOJjBsmA0RcWDgHaLF?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 5,
+        "titulo": "Matar a un Ruiseñor",
+        "autor": "Harper Lee",
+        "genero": "Drama",
+        "imagen": "https://th.bing.com/th/id/OIP.kgYBtBi63S7IW7RGunYvVgHaLC?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 6,
+        "titulo": "El Gran Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "genero": "Clásico",
+        "imagen": "https://th.bing.com/th/id/OIP.4hjdaRpE5Ny3YRoNwFQt7AHaLI?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 7,
+        "titulo": "Don Quijote de la Mancha",
+        "autor": "Miguel de Cervantes",
+        "genero": "Aventura",
+        "imagen": "https://th.bing.com/th/id/OIP.zEsOViJ_lOvcayAWJ-mX8gHaKq?w=185&h=275&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 8,
+        "titulo": "Harry Potter y la Piedra Filosofal",
+        "autor": "J.K. Rowling",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP._5PgmVJdPfAGKMH2ouoAEgHaKd?w=185&h=269&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 9,
+        "titulo": "El Hobbit",
+        "autor": "J.R.R. Tolkien",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.35IC8BY6Z1dktXTt-TOjzgHaLJ?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 10,
+        "titulo": "Crimen y Castigo",
+        "autor": "Fiódor Dostoyevski",
+        "genero": "Filosófico",
+        "imagen": "https://th.bing.com/th/id/OIP.F8FikTj8BFlmlXOQyC_TlAHaLp?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 11,
+        "titulo": "La Odisea",
+        "autor": "Homero",
+        "genero": "Épico",
+        "imagen": "https://th.bing.com/th/id/OIP.Lzgx0G8rV1UlWjQ1gbKUIAHaLG?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 12,
+        "titulo": "Los Miserables",
+        "autor": "Victor Hugo",
+        "genero": "Drama",
+        "imagen": "https://th.bing.com/th/id/OIP.nFSbgTA6ZmmyhKp4RYP8AwHaK-?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 13,
+        "titulo": "Fahrenheit 451",
+        "autor": "Ray Bradbury",
+        "genero": "Distopía",
+        "imagen": "https://th.bing.com/th/id/OIP.4hh6J8P92ILg5brJMDxz5QHaKd?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 14,
+        "titulo": "El Nombre del Viento",
+        "autor": "Patrick Rothfuss",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.rC9CdSKmGJbgsL4ppLKc8AHaLM?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 15,
+        "titulo": "Drácula",
+        "autor": "Bram Stoker",
+        "genero": "Terror",
+        "imagen": "https://th.bing.com/th/id/OIP.hfMe0TQESf3kBhBujU-zDQHaKM?w=185&h=259&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 16,
+        "titulo": "El Aleph",
+        "autor": "Jorge Luis Borges",
+        "genero": "Filosófico",
+        "imagen": "https://th.bing.com/th/id/OIP.hXQ_vRx2SkjxRfu_pPA1pAHaLX?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 17,
+        "titulo": "Frankenstein",
+        "autor": "Mary Shelley",
+        "genero": "Terror",
+        "imagen": "https://th.bing.com/th/id/OIP.mnbXkqLqClEcIQfZ9HlXOgHaKd?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 18,
+        "titulo": "El Retrato de Dorian Gray",
+        "autor": "Oscar Wilde",
+        "genero": "Clásico",
+        "imagen": "https://th.bing.com/th/id/OIP.l2khlbf4a7V96UVs3VnqawHaKe?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 19,
+        "titulo": "La Metamorfosis",
+        "autor": "Franz Kafka",
+        "genero": "Filosófico",
+        "imagen": "https://th.bing.com/th/id/OIP.-IsDbFKLf-F5um0HS1N56gHaK_?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 20,
+        "titulo": "El Señor de los Anillos",
+        "autor": "J.R.R. Tolkien",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.xWcC2w17r-0mMFnB2I0GGQHaKX?w=185&h=265&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 21,
+        "titulo": "El Alquimista",
+        "autor": "Paulo Coelho",
+        "genero": "Filosófico",
+        "imagen": "https://th.bing.com/th/id/OIP.D9Q56KhFZr1TWXa3W7n7dAHaLc?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 22,
+        "titulo": "It",
+        "autor": "Stephen King",
+        "genero": "Terror",
+        "imagen": "https://th.bing.com/th/id/OIP.r7ls2Y5GR4CIyGc_gAhv0AHaLJ?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 23,
+        "titulo": "La Sombra del Viento",
+        "autor": "Carlos Ruiz Zafón",
+        "genero": "Misterio",
+        "imagen": "https://th.bing.com/th/id/OIP.pUJ4OIlaiyH8CuOyz3CnXAHaKm?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 24,
+        "titulo": "Las Crónicas de Narnia",
+        "autor": "C.S. Lewis",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.zihK72kFwVBC5x1svv_J0AHaKd?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 25,
+        "titulo": "El Padrino",
+        "autor": "Mario Puzo",
+        "genero": "Crimen",
+        "imagen": "https://th.bing.com/th/id/OIP.G5OHncs2omFkE5MEHxTMqwHaLH?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 26,
+        "titulo": "El Código Da Vinci",
+        "autor": "Dan Brown",
+        "genero": "Misterio",
+        "imagen": "https://th.bing.com/th/id/OIP.3V0HY5vRhHGGIdTXqBz4rwHaLJ?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 27,
+        "titulo": "La Divina Comedia",
+        "autor": "Dante Alighieri",
+        "genero": "Épico",
+        "imagen": "https://th.bing.com/th/id/OIP.8UM6MHaKJGFSNN0nlt7KaAHaLQ?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 28,
+        "titulo": "Sherlock Holmes",
+        "autor": "Arthur Conan Doyle",
+        "genero": "Misterio",
+        "imagen": "https://th.bing.com/th/id/OIP.T2CvJw7ShNrmxUfa-r7dmAHaLH?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 29,
+        "titulo": "El Silmarillion",
+        "autor": "J.R.R. Tolkien",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.xgOa9eLMlfMFWY8FQvYh_wHaKc?w=185&h=278&rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 30,
+        "titulo": "La Casa de los Espíritus",
+        "autor": "Isabel Allende",
+        "genero": "Realismo Mágico",
+        "imagen": "https://th.bing.com/th/id/OIP.KCPQTOwG8jLvNQHcAUE2JQHaKY?w=185&h=278&rs=1&pid=ImgDetMain"
+    }
+]
