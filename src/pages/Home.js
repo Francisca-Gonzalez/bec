@@ -34,6 +34,14 @@ const Home = () => {
                 <h3>{genero}</h3>
               </div>
               <div className="home-line"></div>
+              <div className="section-more-info">
+                <Link
+                  to={`/${genero}`}
+                  className="btn btn-dark"
+                >
+                  Ver más
+                </Link>
+              </div>
             </div>
 
             {/* Carrusel */}
