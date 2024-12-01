@@ -30,6 +30,12 @@
   color: white !important;
 }
 
+.dropdown-item:focus, 
+.dropdown-item:hover {
+    background-color: #89664E !important; /* Fondo deseado */
+    color: white !important;             /* Texto blanco */
+}
+
 .form-check, .form-check-input, .form-check-label {
   cursor: pointer !important;
 }
