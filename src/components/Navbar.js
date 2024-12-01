@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/" style={{fontWeight: "bold"}}>
-          <img src={logo} alt="logo" style={{width: "40px", paddingRight: "0.6rem"}}/>
+          <img src={logo} alt="logo" style={{width: "50px", paddingRight: "0.6rem"}}/>
           BEC
         </Link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

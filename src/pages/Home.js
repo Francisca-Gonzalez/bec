@@ -1,10 +1,101 @@
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import librosDestacados from "../assets/libros.json"; // Importa tu JSON
+// import "../styles/Home.css";
+
+// const Home = () => {
+//   const librosPorGenero = agruparPorGenero(librosDestacados);
+
+//   return (
+//     <div>
+//       {/* Jumbotron */}
+//       <div
+//         className="jumbotron text-center"
+//         style={{
+//           marginTop: "1rem",
+//           padding: "2rem",
+//           borderRadius: "10px",
+//           marginBottom: "1rem",
+//         }}
+//       >
+//         <h1>Bienvenido a la Biblioteca BEC</h1>
+//         <p>Descubre nuestra colección de libros y multimedia.</p>
+//         <Link to="/catalog" className="btn btn-dark">
+//           Ver Catálogo Completo
+//         </Link>
+//       </div>
+
+//       {/* Libros por Género */}
+//       <div className="container mt-5">
+//         {Object.keys(librosPorGenero).map((genero) => (
+//           <div key={genero} className="mb-5">
+//             <div className="section-container">
+//               <div className="section-title">
+//                 <h3>{genero}</h3>
+//               </div>
+//               <div className="home-line"></div>
+//               <div className="section-more-info">
+//                 <Link to={`/${genero}`} className="btn btn-dark">
+//                   Ver más
+//                 </Link>
+//               </div>
+//             </div>
+
+//             {/* Lista de Libros */}
+//             <div className="row d-flex align-items-center justify-content-center">
+//               {librosPorGenero[genero]
+//                 .slice(0, 3) // Mostrar hasta 3 libros por género
+//                 .map((libro) => (
+//                   <div className="col-xs-12 col-md-4 mb-4 align-items-center" key={libro.id}>
+//                     <div className="card">
+//                       <img
+//                         src={libro.imagen}
+//                         className="card-img-top"
+//                         alt={libro.titulo}
+//                       />
+//                       <div className="card-body">
+//                         <h5 className="card-title">{libro.titulo}</h5>
+//                         <p className="card-text text-muted">{libro.autor}</p>
+//                         <Link to={`/book/${libro.id}`} className="btn btn-dark">
+//                           Ver Detalles
+//                         </Link>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 ))}
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// const agruparPorGenero = (libros) => {
+//   return libros.reduce((resultado, libro) => {
+//     if (!resultado[libro.genero]) {
+//       resultado[libro.genero] = [];
+//     }
+//     resultado[libro.genero].push(libro);
+//     return resultado;
+//   }, {});
+// };
+
+// export default Home;
+
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import librosDestacados from "../assets/libros.json"; // Importa tu JSON
 import "../styles/Home.css";
 
 const Home = () => {
   const librosPorGenero = agruparPorGenero(librosDestacados);
+  const navigate = useNavigate();
+
+  // Función para manejar la redirección con el filtro de género
+  const handleVerMas = (genero) => {
+    navigate("/catalog", { state: { generoSeleccionado: genero } });
+  };
 
   return (
     <div>
@@ -15,7 +106,7 @@ const Home = () => {
           marginTop: "1rem",
           padding: "2rem",
           borderRadius: "10px",
-          marginBottom: "1rem"
+          marginBottom: "1rem",
         }}
       >
         <h1>Bienvenido a la Biblioteca BEC</h1>
@@ -25,7 +116,7 @@ const Home = () => {
         </Link>
       </div>
 
-      {/* Carrusel por Género */}
+      {/* Libros por Género */}
       <div className="container mt-5">
         {Object.keys(librosPorGenero).map((genero) => (
           <div key={genero} className="mb-5">
@@ -35,77 +126,43 @@ const Home = () => {
               </div>
               <div className="home-line"></div>
               <div className="section-more-info">
-                <Link
-                  to={`/${genero}`}
+                <button
                   className="btn btn-dark"
+                  onClick={() => handleVerMas(genero)}
                 >
                   Ver más
-                </Link>
+                </button>
               </div>
             </div>
 
-            {/* Carrusel */}
-            <div
-              id={`carousel-${genero}`}
-              className="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner">
-                {chunkArray(librosPorGenero[genero], 3).map((grupo, index) => (
+            {/* Lista de Libros */}
+            <div className="row d-flex align-items-center justify-content-center">
+              {librosPorGenero[genero]
+                .slice(0, 3) // Mostrar hasta 3 libros por género
+                .map((libro) => (
                   <div
-                    className={`carousel-item ${index === 0 ? "active" : ""}`}
-                    key={index}
+                    className="col-xs-12 col-md-4 mb-4 align-items-center"
+                    key={libro.id}
                   >
-                    <div className="row">
-                      {grupo.map((libro) => (
-                        <div className="col-md-4" key={libro.id}>
-                          <div className="card">
-                            <img
-                              src={libro.imagen}
-                              className="card-img-top"
-                              alt={libro.titulo}
-                            />
-                            <div className="card-body">
-                              <h5 className="card-title">{libro.titulo}</h5>
-                              <p className="card-text text-muted">{libro.autor}</p>
-                              <Link
-                                to={`/book/${libro.id}`}
-                                className="btn btn-dark"
-                              >
-                                Ver Detalles
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
+                    <div className="card">
+                      <img
+                        src={libro.imagen}
+                        className="card-img-top"
+                        alt={libro.titulo}
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{libro.titulo}</h5>
+                        <p className="card-text text-muted">{libro.autor}</p>
+                        <Link
+                          to={`/book/${libro.id}`}
+                          className="btn btn-dark"
+                        >
+                          Ver Detalles
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 ))}
-              </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target={`#carousel-${genero}`}
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Anterior</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target={`#carousel-${genero}`}
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Siguiente</span>
-              </button>
             </div>
           </div>
         ))}
@@ -122,14 +179,6 @@ const agruparPorGenero = (libros) => {
     resultado[libro.genero].push(libro);
     return resultado;
   }, {});
-};
-
-const chunkArray = (array, chunkSize) => {
-  const chunks = [];
-  for (let i = 0; i < array.length; i += chunkSize) {
-    chunks.push(array.slice(i, i + chunkSize));
-  }
-  return chunks;
 };
 
 export default Home;

@@ -1,11 +1,37 @@
 .card {
-    width: 280px;
+    width: 280px; /* Tamaño predeterminado */
 }
-
+  
 .card-img-top {
-    height: 300px;
-    width: 280px;
+    height: 300px; /* Altura fija para imágenes */
+    width: 280px; /* Ancho predeterminado */
+    object-fit: cover; /* Asegura que las imágenes se vean bien recortadas */
 }
+  
+  /* Para pantallas medianas */
+@media (max-width: 768px) {
+    .card {
+        width: 220px; /* Reduce el tamaño de las cards */
+    }
+  
+    .card-img-top {
+        height: 250px; /* Reduce la altura de las imágenes */
+        width: 220px; /* Ajusta al nuevo tamaño de la card */
+    }
+}
+  
+  /* Para pantallas pequeñas */
+@media (max-width: 576px) {
+    .card {
+        width: 180px; /* Tamaño más pequeño para móviles */
+    }
+  
+    .card-img-top {
+        height: 200px; /* Ajusta la altura proporcionalmente */
+        width: 180px;
+    }
+}
+  
 
 .section-container {
     display: flex;

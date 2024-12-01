@@ -1,53 +1,39 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import libros from "../assets/libros.json"; // Importa tu JSON
+import Breadcrumb from "../components/Breadcrumb"; // Importa tu componente Breadcrumb
 
 const BookDetails = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // Obtén el ID desde los parámetros de la URL
 
-  const libros = [
-    {
-      id: 1,
-      titulo: "El Principito",
-      autor: "Antoine de Saint-Exupéry",
-      categoria: "Filosofía",
-      disponible: true,
-      sinopsis:
-        "El Principito es una obra clásica que explora la vida, el amor y la amistad desde la perspectiva de un niño.",
-      imagen: "https://th.bing.com/th/id/OIP.4jjqK8r4niDGIu1EzysUaAHaL8?rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 2,
-      titulo: "Cien Años de Soledad",
-      autor: "Gabriel García Márquez",
-      categoria: "Literatura",
-      disponible: false,
-      sinopsis:
-        "Una obra maestra del realismo mágico que narra la historia de la familia Buendía en Macondo.",
-      imagen: "https://th.bing.com/th/id/OIP.V_zRhQVc2o3qUvlc7KwpxgHaLT?w=600&h=916&rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 3,
-      titulo: "1984",
-      autor: "George Orwell",
-      categoria: "Distopía",
-      disponible: true,
-      sinopsis:
-        "Un relato distópico sobre un mundo donde la vigilancia y el control son absolutos.",
-      imagen: "https://th.bing.com/th/id/OIP.8weipgxeZASSI2nt9APKNAAAAA?rs=1&pid=ImgDetMain",
-    },
-  ];
-
+  // Busca el libro en el JSON según el ID
   const libro = libros.find((book) => book.id === parseInt(id));
 
+  // Si no encuentra el libro, muestra un mensaje de error
   if (!libro) {
-    return <p>Libro no encontrado.</p>;
+    return (
+      <div className="container mt-5">
+        <p>Libro no encontrado.</p>
+        <Link to="/catalog" className="btn btn-dark">
+          Volver al Catálogo
+        </Link>
+      </div>
+    );
   }
+
+  // Configuración de las migas de pan
+  const breadcrumbItems = [
+    { label: "Inicio", path: "/", active: false },
+    { label: "Catálogo", path: "/catalog", active: false },
+    { label: libro.titulo, path: `/book/${id}`, active: true },
+  ];
 
   return (
     <div className="container mt-5">
-      <Link to="/catalog" className="btn btn-dark mb-4">
-        Volver al Catálogo
-      </Link>
+      {/* Migas de Pan */}
+      <Breadcrumb items={breadcrumbItems} />
+
+      {/* Detalles del Libro */}
       <div
         className="d-flex align-items-start"
         style={{
@@ -73,7 +59,7 @@ const BookDetails = () => {
         <div>
           <h1>{libro.titulo}</h1>
           <h5 className="text-muted">Autor: {libro.autor}</h5>
-          <h6>Categoría: {libro.categoria}</h6>
+          <h6>Género: {libro.genero}</h6>
           <p className="mt-3">{libro.sinopsis}</p>
           <p>
             <strong>Estado:</strong>{" "}

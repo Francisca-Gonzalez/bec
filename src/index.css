@@ -3,7 +3,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   line-height: 1.3;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,4 +22,5 @@ p, a, li {
   background-color: #89664E !important;
   border: none !important;
   color: white !important;
+  text-transform: uppercase !important;
 }
