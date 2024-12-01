@@ -35,40 +35,75 @@ const BookDetails = () => {
 
       {/* Detalles del Libro */}
       <div
-        className="d-flex align-items-start"
+        className="d-flex flex-column flex-md-row align-items-start"
         style={{
-          border: "1px solid #ddd",
-          borderRadius: "10px",
-          padding: "20px",
-          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+          padding: "20px"
         }}
       >
         {/* Imagen a la izquierda */}
-        <img
-          src={libro.imagen}
-          alt={libro.titulo}
+        <div
           style={{
-            height: "200px",
-            width: "auto",
-            borderRadius: "10px",
+            flex: "0 0 auto",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: "20px",
             marginRight: "20px",
           }}
-        />
+        >
+          <img
+            src={libro.imagen}
+            alt={libro.titulo}
+            style={{
+              maxHeight: "600px",
+              maxWidth: "100%",
+              borderRadius: "10px",
+            }}
+          />
+        </div>
 
         {/* Detalles a la derecha */}
-        <div>
+        <div style={{ flex: "1", display: "flex", textAlign: "left", flexDirection: "column"}}>
           <h1>{libro.titulo}</h1>
-          <h5 className="text-muted">Autor: {libro.autor}</h5>
-          <h6>Género: {libro.genero}</h6>
-          <p className="mt-3">{libro.sinopsis}</p>
+          <h7 className="text-muted">{libro.autor}</h7>
+          <h7><strong>Género:</strong> {libro.genero}</h7>
+          <p><strong>Sinopsis:</strong> {libro.sinopsis}</p>
           <p>
-            <strong>Estado:</strong>{" "}
-            <span className={`badge ${libro.disponible ? "bg-success" : "bg-danger"}`}>
+            <strong>Estado: </strong>
+            <span
+              className={`badge ${libro.disponible ? "bg-success" : "bg-danger"}`}
+            >
               {libro.disponible ? "Disponible" : "No Disponible"}
             </span>
           </p>
+
+          {/* Botón de Reservar */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "20px",
+            }}
+          >
+            <button
+              className="btn btn-primary"
+              disabled={!libro.disponible}
+              onClick={() => alert(`Has reservado: ${libro.titulo}`)}
+              style={{
+                cursor: libro.disponible ? "pointer" : "not-allowed",
+                opacity: libro.disponible ? "1" : "0.6",
+              }}
+            >
+              Reservar
+            </button>
+          </div>
         </div>
+
+
+
       </div>
+
+
     </div>
   );
 };

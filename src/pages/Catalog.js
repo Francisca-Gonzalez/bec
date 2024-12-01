@@ -225,7 +225,7 @@ const Catalog = () => {
       {/* Migas de Pan */}
       <Breadcrumb items={breadcrumbItems} />
 
-      <h1 className="text-center mb-4">Catálogo Completo</h1>
+      <h1 className="text-center mb-4">Catálogo</h1>
 
       {/* Barra de Búsqueda */}
       <div className="mb-4 d-flex align-items-center">
@@ -295,31 +295,84 @@ const Catalog = () => {
       <div className="row">
         {filteredBooks.length > 0 ? (
           filteredBooks.map((libro) => (
-            <div className="col-md-4 mb-4 d-flex align-items-center" key={libro.id}>
-              <div className="card">
-                <img
-                  src={libro.imagen}
-                  className="card-img-top"
-                  alt={libro.titulo}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{libro.titulo}</h5>
-                  <h6 className="card-subtitle text-muted">{libro.autor}</h6>
-                  <p>
-                    <span
-                      className={`badge ${
-                        libro.disponible ? "bg-success" : "bg-danger"
-                      }`}
-                    >
-                      {libro.disponible ? "Disponible" : "No Disponible"}
-                    </span>
-                  </p>
-                  <Link to={`/book/${libro.id}`} className="btn btn-dark">
-                    Ver Detalles
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-center justify-content-center" key={libro.id}>
+              <Link to={`/book/${libro.id}`} className="text-decoration-none">
+                      <div
+                        className="card"
+                        style={{
+                          cursor: "pointer",
+                          border: "1px solid #ddd",
+                          borderRadius: "10px",
+                          overflow: "hidden",
+                          padding: "5px",
+                          transition: "transform 0.2s",
+                          width: "200px", // Ancho fijo para la card
+                        }}
+                        onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+                        onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                      >
+                        {/* Imagen del libro */}
+                        <div
+                          style={{
+                            width: "100%",
+                            height: "300px", // Altura fija para el contenedor
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            overflow: "hidden", // Asegurar que la imagen no se salga del contenedor
+                          }}
+                        >
+                          <img
+                            src={libro.imagen}
+                            alt={libro.titulo}
+                            style={{
+                              borderRadius: "12px",
+                              width: "200px", // Ancho fijo
+                              height: "300px", // Alto fijo
+                              objectFit: "cover", // Asegurar que la imagen cubra todo el contenedor sin deformarse
+                            }}
+                          />
+                        </div>
+
+                        {/* Título debajo */}
+                        <div
+                          className="card-body"
+                          style={{
+                            padding: "10px",
+                            textAlign: "left", // Alineación a la izquierda
+                          }}
+                        >
+                          <h5
+                            className="card-title text-dark"
+                            style={{
+                              textTransform: "capitalize", // camelCase
+                              fontSize: "1rem",
+                              lineHeight: "1.2", // Altura para dos líneas (1.2rem * 2 líneas)
+                              overflow: "hidden", // Esconder el texto adicional
+                              textOverflow: "ellipsis", // Mostrar "..." al final del texto
+                              whiteSpace: "nowrap", // Evitar saltos de línea
+                            }}
+                          >
+                            {libro.titulo.toLowerCase()}
+                          </h5>
+                          <h5
+                            className="card-title text-dark"
+                            style={{
+                              textTransform: "capitalize", // camelCase
+                              fontSize: "1rem",
+                              lineHeight: "1.2",// Altura para dos líneas (1.2rem * 2 líneas)
+                              overflow: "hidden", // Esconder el texto adicional
+                              textOverflow: "ellipsis", // Mostrar "..." al final del texto
+                              whiteSpace: "nowrap", // Evitar saltos de línea
+                            }}
+                          >
+                            {libro.autor.toLowerCase()}
+                          </h5>
+                        </div>
+                      </div>
+                    </Link>
+
+                  </div>
           ))
         ) : (
           <p className="text-center">No se encontraron resultados.</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import PrestamosAdmin from "./pages/PrestamosAdmin";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import BookDetails from "./pages/BookDetails";
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/book/:id" element={<BookDetails />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/prestamos-admin" element={<PrestamosAdmin />} />
       </Routes>
     </Router>
   );
